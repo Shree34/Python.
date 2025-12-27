@@ -1,0 +1,112 @@
+# 1. Take a number. Print "Positive", "Negative", or "Zero"
+num= int(input('Enter a Number: '))
+if num>0:
+    print('This is positive number',num)
+elif num == 0:
+    print('This is zero', num)
+else:
+    print('This is Negative number',num)
+
+# 2. Take age. Print "Child", "Teen", "Adult", "Senior".
+age = int(input('Enter your age:'))
+if 120 >= age >= 1:
+    if age <= 12:
+        print('You are a child', age)
+    elif age <= 17:
+        print('You are a Teenager', age)
+    elif age <= 59:
+        print('You are an Adult', age)
+    else:
+        print('You are a Senior', age)
+else:
+    print('Enter Valid age')
+# 3. Take 3 numbers. Print the greatest (NO max()).
+print('Enter Three Numbers')
+a, b, c = int(input('a=')), int(input('b=')), int(input('c='))
+if a > b and a > c:
+    print('The greater number is', a)
+elif b > a and b > c:
+    print('The greater number is', b)
+elif c > a and c > b:
+    print('The greater number is', c)
+else:
+    print('Some numbers are equal')
+
+
+# 4. Take marks. Print grade using nested if-else.
+marks = int(input('Enter your Marks out of 100: '))
+if 100 >= marks >= 0:
+    if marks >= 91:
+        print(f'A+ Grade ({marks}/100)')
+    elif marks >= 81:
+        print(f'A Grade ({marks}/100)')
+    elif marks >= 71:
+        print(f'B+ Grade ({marks}/100)')
+    elif marks >= 61:
+        print(f'B Grade ({marks}/100)')
+    elif marks >= 51:
+        print(f'C+ Grade ({marks}/100)')
+    elif marks >= 41:
+        print(f'C Grade ({marks}/100)')
+    elif marks >= 35:
+        print(f'D Grade ({marks}/100)')
+    else:
+        print(f'Fail ({marks}/100). Try harder!')
+else:
+    print('Enter valid marks out of 100')
+# 5. Take a year. Check leap year.
+year=int(input('Enter a year :'))
+if 9999>= year >= 1:
+    if year%100 == 0:
+        if  year%400 == 0:
+            print('This is a leap year', year)
+        else:
+            print('This is not a leap year.',year)
+    else :
+        if year%4==0:
+            print('This is a leap year',year)
+
+        else :
+            print('This is not a leap Year',year)
+else:
+    print('Enter a valid year.')
+
+# 6. Take a character. Check vowel and consonant.
+char = input('Enter any word or character: ')
+vowel = 'aeiouAEIOU'
+i = j = 0
+for c in char:
+    if c.isalpha():
+        if c in vowel:
+            i += 1
+        else:
+            j += 1
+print('vowels =', i)
+print('consonants =', j)
+    
+# 7. Take salary. Add bonus based on conditions.
+salary = float(input('Enter your Monthly Salary: '))
+print('Choose one option')
+print('A. Performance is Good this Month')
+print('B. The Company Earned Profit this Month')
+print('C. Sales are High this Month')
+print('D. You are Employee of the Month')
+print('E. All of the above')
+print('F. None of the above')
+z = input('Enter your choice: ').upper()
+
+match z:
+    case 'A':
+        print(f'Good performance! Salary with bonus: {salary + 10000}')
+    case 'B':
+        print(f'Company profit bonus! Salary with bonus: {salary + 15000}')
+    case 'C':
+        print(f'Sales bonus! Salary with bonus: {salary + 20000}')
+    case 'D':
+        print(f'Employee of the Month bonus! Salary with bonus: {salary + 25000}')
+    case 'E':
+        print(f'Excellent performance! Salary with bonus: {salary + 30000}')
+    case 'F':
+        print(f'No bonus this month. Salary remains: {salary}')
+    case _:
+        print('Enter Valid Choice, Have a good day!')
