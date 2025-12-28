@@ -110,3 +110,19 @@ match z:
         print(f'No bonus this month. Salary remains: {salary}')
     case _:
         print('Enter Valid Choice, Have a good day!')
+# 8. Take a number. Print "Even" or "Odd" in one line.
+number=int(input('Enter a nmuber :'))
+print('The Number is Even' if number%2==0 else 'The Number is Odd')
+
+#9. Take two numbers. Print larger using single-line if.
+a,b=int(input('Enter first number:')),int(input('Enter Second Number:'))
+print(f'The greter number is=',a if a>b else b)
+
+# 10. Print tecket price based upon wallet price.
+ticket_price = 100
+wallet_size = 100
+if wallet_size >= ticket_price:
+    print('Ticket booked successfully!')
+else:
+    print('Insufficient funds in wallet.')  
+
